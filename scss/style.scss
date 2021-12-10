@@ -18,9 +18,10 @@ body{
 
 .wrapper {
 	display: flex;
-	overflow: auto;
+	
 	flex-direction: column;
 	max-width: 767px;
+
 
 }
 
@@ -68,6 +69,9 @@ body{
 		&__text {
 			margin-left:12px;
 			margin-right: 16px;
+			font-size: 28px;
+			line-height: 40px;
+			letter-spacing: -0.6 px;
 		}
 }
 .navigation {	
@@ -77,7 +81,7 @@ body{
 }
 .list {
 	display: flex;
-
+	overflow: auto;
 		&__element {
 			display: flex;
 			width: 246px;
@@ -85,6 +89,8 @@ body{
 			padding:8px 9.3px 8px 16.54px;
 			margin-left:16px;
 			color:#7E7E82;
+			font-size: 16px;
+			line-height: 24px;
 			
 		}
 		&__element:enabled{
@@ -98,7 +104,7 @@ flex-direction: column;
 flex-grow:1;
 
 		&__body {
-			margin:0px 16px;
+			margin:20px 16px;
 			
 		}
 
@@ -115,8 +121,10 @@ flex-grow:1;
 		}
 }
 .image-container {
+	margin-top: 15px;
 	margin-bottom: 7.62px;
-
+	display: flex;
+	justify-content: center;
 		&__element {
 
 		}
