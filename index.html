@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>First Task</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet"> 
 </head>
+
 <body>
-	
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__burger burger">
+				<button class="burger__button"><img src="img/burger.png" alt="Выпадающее меню"></button>
+			</div>
+			<img class="header__logo" src="img/Group.png" alt="Логотип">
+			<img class="header__divider" src="img/divider.png" alt="">
+			<button class="header__repair-button"><img src="img/repair.png" alt="Оставить заявку"></button>
+			<button class="header__checkstatus-button"><img src="img/checkstatus.png" alt="Статус ремонта"></button>
+			</header>
+			<div class="title">
+				<img class="title__highlight" src="img/highlight.png" alt="">
+				<h1 class="title__text">Услуги и сервисы</h1>
+			</div>
+
+			<nav class="navigation">
+				<ul class="navigation__list list">
+					<li><a class="list__element" href="#">Ремонтируемые устройства</a></li>
+					<li><a class="list__element" href="#">Дополнительные услуги</a></li>
+				</ul>
+			</nav>
+
+			<div class="content">
+				<div class="content__body">
+					Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+					отремонтировать
+					свой ноутбук Dell с официальной гарантией производителя.
+				</div>
+				<div class="content__read-more read-more">
+					<img class="read-more__icon" src="img/icon.png" alt="">
+					<button class="read-more__button">Читать далее</button>
+				</div>
+			</div>
+			<div class="image-container">
+				<img class="image-container__element" src="img/_MG_3223 (1).png" alt="Фотография с логотипом компании">
+			</div>
+	</div>
 </body>
+
 </html>

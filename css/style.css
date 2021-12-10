@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 767px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.header__burger {
+  margin-top: 24px;
+}
+
+.header__logo {
+  margin-top: 24px;
+}
+
+.header__divider {
+  margin-top: 24px;
+}
+
+.header__repair-button {
+  margin-top: 24px;
+}
+
+.header__checkstatus-button {
+  margin-top: 24px;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+}
+
+.title__highlight {
+  max-height: 40px;
+}
+
+.title__text {
+  margin-left: 12px;
+  margin-right: 16px;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 246px;
+  height: 40px;
+  padding: 8px 9.3px 8px 16.54px;
+  margin-left: 16px;
+  color: #7E7E82;
+}
+
+.list__element:enabled {
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.content__body {
+  margin: 0px 16px;
+}
+
+.content__read-more {
+  margin-left: 24px;
+}
+
+.image-container {
+  margin-bottom: 7.62px;
+}
