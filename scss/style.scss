@@ -12,44 +12,130 @@ ul li{list-style: none;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 
+button{
+	background-color:transparent;
+	border: none;
+ }
+
 body{
 	font-family: 'Roboto', sans-serif;
 }
 
+$main-background-color:#F8F8F8;
+$header-background-color:white;
+$main-text-color:#1B1C21;
+
+
+
 .wrapper {
 	display: flex;
-	
 	flex-direction: column;
+	align-content: center;
 	max-width: 767px;
-
-
+	background-color: $main-background-color;
+	@media (min-width:768px) and (max-width:1119.98px){
+		max-width: 1119.98px;
+	}
 }
 
 .header {
 	display: flex;
 	flex: 1 1 auto;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: flex-end;
-	
+	background-color: $header-background-color;
+	@media (min-width:768px) and (max-width:1119.98px){
+		justify-content: flex-end;
+	}
 	
 		&__burger {
 			margin-top: 24px;
+			margin-bottom: 24px;
+			margin-left: 16px;
+			margin-right: 16.73px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				align-self: flex-start;
+				order: 1;
+				margin: 24px 20px 24px 24px;
+			}
 		}
 
 		&__logo {
-			margin-top: 24px;
+			margin-top: 18.59px;
+			margin-bottom: 18.59px;
+			margin-right:16.73px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-right: auto;
+				order: 3;
+			}
 		}
 
 		&__divider {
-			margin-top: 24px;
+			margin-top: 28px;
+			margin-bottom: 28px;
+			margin-right: 20px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-right: 20.73px;
+				align-self: flex-start;
+				order: 2;
+			}
 		}
+		
+		&__divider-2{
+			display: none;
+			margin-top: 28px;
+			margin-bottom: 28px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				display: inline;
+				order: 7;
+				margin:28px 20px;
+			}
+		}
+
+		&__call-button {
+			display: none;
+			@media (min-width:768px) and (max-width:1119.98px){
+				display: inline;
+				order: 4;
+				margin:24px 0px 24px 16px;
+			}
+			}
+	
+		&__chat-button {
+			display: none;
+			@media (min-width:768px) and (max-width:1119.98px){
+				display: inline;
+				order: 5;
+				margin:24px 0px 24px 16px;
+			}
+			}
+	
+		&__profile-button {
+			display: none;
+			@media (min-width:768px) and (max-width:1119.98px){
+				display: inline;
+				order: 6;
+				margin:24px 0px 24px 16px;
+			}
+			}
 
 		&__repair-button {
 			margin-top: 24px;
+			margin-bottom: 24px;
+			margin-right: 16px;
+			@media (min-width:768px) and (max-width:1119.98px){	
+				order: 8;
+			}
 		}
 
 		&__checkstatus-button {
 			margin-top: 24px;
+			margin-bottom: 24px;
+			margin-right: 16px;
+			@media (min-width:768px) and (max-width:1119.98px){	
+				order: 9;
+				margin-right: 24px;
+			}
 		}
 }
 .burger {
@@ -60,22 +146,32 @@ body{
 .title {
 	display: flex;
 	margin-top: 24px;
+	margin-bottom: 24px;
+	@media (min-width:768px) and (max-width:1119.98px){
+		margin-bottom: 32px;
+	}
+	
 
 		&__highlight {
 			max-height: 40px;
-			
+			max-width: 4px;
 		}
 
 		&__text {
-			margin-left:12px;
+			width: 288px;
+			height: 40px;
 			margin-right: 16px;
+			margin-left:12px;
 			font-size: 28px;
 			line-height: 40px;
 			letter-spacing: -0.6 px;
+			color:$main-text-color;
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-left: 20px;
+			}
 		}
 }
 .navigation {	
-
 		&__list {
 		}
 }
@@ -89,43 +185,92 @@ body{
 			padding:8px 9.3px 8px 16.54px;
 			margin-left:16px;
 			color:#7E7E82;
-			font-size: 16px;
-			line-height: 24px;
+			font-size: 1rem;
+			line-height: 24px;	
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-left: 24px;
 			
 		}
 		&__element:enabled{
 			border: 2px solid #B8FFEC;
 			border-radius: 6px;
 		}
+	}
 }
 .content {
 display: flex;
 flex-direction: column;
-flex-grow:1;
-
-		&__body {
-			margin:20px 16px;
-			
-		}
-
-		&__read-more {
-			margin-left:24px;
-		}
+@media (min-width:768px) and (max-width:1119.98px){
+	width: 50%;
+	
 }
-.read-more {
 
+	&__body {
+		margin:20px 16px;
+		color:$main-text-color;
+		@media (min-width:768px) and (max-width:1119.98px){
+			margin: 32px 48px 10px 24px;
+		}
+	}
+
+
+.read-more {
+	line-height: 24px;
+	font-size: 16px;
+	letter-spacing: -0.2px;
+	font-size: 1rem;
+	
 		&__icon {
+			margin-left:24px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-left: 33px;
+			}
 		}
 
 		&__button {
+			margin-left: 16px;
+			width: 100px;
+			height: 24px;
+			color:$main-text-color;
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-bottom: 54px;
+			}
+			//?font-weight: bold;		
+	
 		}
+	}
 }
 .image-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	margin-top: 15px;
 	margin-bottom: 7.62px;
-	display: flex;
-	justify-content: center;
+	@media (min-width:768px) and (max-width:1119.98px){
+		justify-content: flex-start;
+		flex: 1 1 auto;
+		padding: 26px 0px 25.66px 0px;
+		margin-right: 25px;
 		&__element {
-
+			align-self: flex-start;
+			border-radius: 5px;
+	}
 		}
-}
+
+	}
+
+.body__text{
+	
+	&::after{
+		content: " Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
+			}
+		}
+
+	
+	@media (min-width:768px) and (max-width:1119.98px){
+		.main-container {
+			display: flex;
+		}
+	}
+	
+	
