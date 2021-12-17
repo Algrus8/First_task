@@ -18,6 +18,7 @@ button{
  }
 
 body{
+	background-color: $main-background-color;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -32,9 +33,12 @@ $main-text-color:#1B1C21;
 	flex-direction: column;
 	align-content: center;
 	max-width: 767px;
-	background-color: $main-background-color;
+
 	@media (min-width:768px) and (max-width:1119.98px){
 		max-width: 1119.98px;
+	}
+	@media (min-width:1120px){
+		max-width: none;
 	}
 }
 
@@ -46,6 +50,10 @@ $main-text-color:#1B1C21;
 	background-color: $header-background-color;
 	@media (min-width:768px) and (max-width:1119.98px){
 		justify-content: flex-end;
+	}
+	
+	@media (min-width:1120px){
+		display: none;
 	}
 	
 		&__burger {
@@ -148,9 +156,12 @@ $main-text-color:#1B1C21;
 	margin-top: 24px;
 	margin-bottom: 24px;
 	@media (min-width:768px) and (max-width:1119.98px){
-		margin-bottom: 32px;
+		margin-bottom: 40px;
 	}
-	
+	@media (min-width:1120px){
+		margin-top: 42px;
+		margin-bottom: 17px;
+	}
 
 		&__highlight {
 			max-height: 40px;
@@ -169,8 +180,35 @@ $main-text-color:#1B1C21;
 			@media (min-width:768px) and (max-width:1119.98px){
 				margin-left: 20px;
 			}
+			@media (min-width:1120px){
+				margin-left: 30px;
+			}
+
 		}
-}
+
+
+
+		&__buttons {
+			display: none;
+			@media (min-width:1120px){
+				display: inline;
+				margin-left: auto;
+				align-items:center ;
+			}
+			
+		}
+	
+		&__repair-button {
+		margin-right: 32px;
+		margin-left: 8px;
+		}
+	
+		&__checkstatus-button {
+		margin-right: 32px;
+		margin-left: 9px;
+		}
+	}
+	
 .navigation {	
 		&__list {
 		}
@@ -182,27 +220,65 @@ $main-text-color:#1B1C21;
 			display: flex;
 			width: 246px;
 			height: 40px;
-			padding:8px 9.3px 8px 16.54px;
-			margin-left:16px;
 			color:#7E7E82;
 			font-size: 1rem;
 			line-height: 24px;	
 			@media (min-width:768px) and (max-width:1119.98px){
-				margin-left: 24px;
-			
+				width: max-content;
+				height: 24px;
+				color:#7E7E82;
+				font-size: 1rem;
+				line-height: 24px;	
+			}
+
+			@media (min-width:1120px){
+				width: max-content;
+			}
+
 		}
+			
 		&__element:enabled{
+			padding:8px 9.3px 8px 16.54px;
 			border: 2px solid #B8FFEC;
 			border-radius: 6px;
+			@media (min-width:768px) and (max-width:1119.98px){
+				
+		}
+		}
+
+		&__element:first-child{
+			margin-left:16px;
+
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin-left: 24px;
+		}
+			@media (min-width:1120px){
+				margin-left: 32px;
+			}
+		}
+
+		&__element:nth-child(2){
+			@media (min-width:768px) and (max-width:1119.98px){
+				margin: 0px 25px;
+			}
+			@media (min-width:1120px){
+				margin: 0px 25px;
+			}
+		}
+
+		@media (min-width:1120px){
+			flex-wrap: wrap;
 		}
 	}
-}
+	
 .content {
 display: flex;
 flex-direction: column;
 @media (min-width:768px) and (max-width:1119.98px){
+	width: 50%;	
+}
+@media (min-width:1120px){
 	width: 50%;
-	
 }
 
 	&__body {
@@ -210,6 +286,9 @@ flex-direction: column;
 		color:$main-text-color;
 		@media (min-width:768px) and (max-width:1119.98px){
 			margin: 32px 48px 10px 24px;
+		}
+		@media (min-width:1120px){
+			margin: 19.22px 36px 13.78px 34px;
 		}
 	}
 
@@ -225,6 +304,9 @@ flex-direction: column;
 			@media (min-width:768px) and (max-width:1119.98px){
 				margin-left: 33px;
 			}
+			@media (min-width:1120px){
+				margin-left: 40px;
+			}
 		}
 
 		&__button {
@@ -235,11 +317,14 @@ flex-direction: column;
 			@media (min-width:768px) and (max-width:1119.98px){
 				margin-bottom: 54px;
 			}
+			@media (min-width:1120px){
+				margin-left: 40px;
+			}
 			//?font-weight: bold;		
 	
 		}
 	}
-}
+
 .image-container {
 	display: flex;
 	flex-direction: row;
@@ -256,21 +341,42 @@ flex-direction: column;
 			border-radius: 5px;
 	}
 		}
-
+		@media (min-width:1120px){
+			justify-content: flex-start;
+			flex: 1 1 auto;
+			padding: 26px 0px 25.66px 0px;
+			margin-right: 28.65px;
+			margin-bottom: 11.13;
+			
+			&__element {
+				align-self: flex-start;
+				border-radius: 5px;
+		}
 	}
-
+}
 .body__text{
-	
+	@media (min-width:768px) and (max-width:1119.98px){
 	&::after{
 		content: " Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
 			}
 		}
+	@media (min-width:1120px){
+		&::after{
+			content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
+				}
+		}
+	}
+}
 
-	
 	@media (min-width:768px) and (max-width:1119.98px){
 		.main-container {
 			display: flex;
 		}
 	}
-	
+
+	@media (min-width:1120px){
+		.main-container {
+			display: flex;
+		}
+	}
 	
