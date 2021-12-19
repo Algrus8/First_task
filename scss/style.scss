@@ -17,16 +17,14 @@ button{
 	border: none;
  }
 
-body{
-	background-color: $main-background-color;
-	font-family: 'Roboto', sans-serif;
-}
-
 $main-background-color:#F8F8F8;
 $header-background-color:white;
 $main-text-color:#1B1C21;
 
-
+body{
+	background-color: $main-background-color;
+	font-family: 'Roboto', sans-serif;
+}
 
 .wrapper {
 	display: flex;
@@ -237,13 +235,16 @@ $main-text-color:#1B1C21;
 
 		}
 			
-		&__element:enabled{
+		&__element:active{
 			padding:8px 9.3px 8px 16.54px;
 			border: 2px solid #B8FFEC;
 			border-radius: 6px;
 			@media (min-width:768px) and (max-width:1119.98px){
-				
+				padding:8px 9px 8px 16px;	
 		}
+			@media (min-width:1120px){
+				padding: 8px 22px;
+			}		
 		}
 
 		&__element:first-child{
@@ -257,7 +258,7 @@ $main-text-color:#1B1C21;
 			}
 		}
 
-		&__element:nth-child(2){
+		&__element:nth-child(2n){
 			@media (min-width:768px) and (max-width:1119.98px){
 				margin: 0px 25px;
 			}
@@ -325,7 +326,28 @@ flex-direction: column;
 		}
 	}
 
-.image-container {
+	.body__text1{
+		display: none;
+		@media (min-width:768px) and (max-width:1119.98px){
+		display: inline;
+			}
+		@media (min-width:1120px){
+		
+			}
+		}
+
+	.body__text2{
+		display: none;
+		@media (min-width:768px) and (max-width:1119.98px){
+		
+			}
+		@media (min-width:1120px){
+		display: inline;
+			}
+			}
+
+	}
+/*.image-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -337,8 +359,10 @@ flex-direction: column;
 		padding: 26px 0px 25.66px 0px;
 		margin-right: 25px;
 		&__element {
+		
 			align-self: flex-start;
 			border-radius: 5px;
+			
 	}
 		}
 		@media (min-width:1120px){
@@ -354,18 +378,11 @@ flex-direction: column;
 		}
 	}
 }
-.body__text{
-	@media (min-width:768px) and (max-width:1119.98px){
-	&::after{
-		content: " Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
-			}
-		}
-	@media (min-width:1120px){
-		&::after{
-			content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
-				}
-		}
-	}
+*/
+
+.image-container{
+	background-image: url(img/_MG_3223.png);
+	background-color: $main-background-color;
 }
 
 	@media (min-width:768px) and (max-width:1119.98px){
@@ -379,4 +396,6 @@ flex-direction: column;
 			display: flex;
 		}
 	}
+	
+
 	
