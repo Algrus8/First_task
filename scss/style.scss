@@ -98,6 +98,11 @@ body {
   }
 
   &__divider {
+    flex-shrink: 0;
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: #eaeaea;
     margin-top: 28px;
     margin-bottom: 28px;
     margin-right: 20px;
@@ -109,6 +114,11 @@ body {
   }
 
   &__divider-2 {
+    flex-shrink: 0;
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: #eaeaea;
     display: none;
     margin-top: 28px;
     margin-bottom: 28px;
@@ -178,8 +188,11 @@ body {
   }
 
   &__highlight {
-    max-height: 40px;
-    max-width: 4px;
+    height: 40px;
+    width: 4px;
+    background-color: #41f6d7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   &__text {
@@ -276,6 +289,12 @@ body {
       margin-bottom: 8px;
     }
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .content {
